@@ -1,19 +1,31 @@
+.maincontainer{
+  // border: 10px solid black;
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+}
 .iconstag1{
     margin-left: 200px;
+    
   }
   .iconstag2{
     margin-left: 10px;
+
   
   }
   .iconstag3{
     margin-left: 10px;
     cursor: pointer;
+  //  border: 1px solid black;
+  
+
   }
   .iconspace  {
       display: flex;
-    //   border: 1px solid black;
+      // border: 1px solid black;
       width: 400px;
       justify-content: space-between;
+      
 
   }
  
@@ -22,6 +34,7 @@
       position: relative;
       left: 100px;
       bottom: 5px;
+      
   }
   
   .iconimg4{
@@ -29,6 +42,7 @@
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
+    
   }
   .noteclose{
   display: flex;
@@ -41,6 +55,7 @@
   .noteclose a{
   text-decoration: none;
   font-size: large;
+  
   color: #000;
     }
   
@@ -51,8 +66,11 @@
       margin: auto;
       box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
       border-radius: 8px;
+      
       background: #fff;
       margin-top: 40px;
+      width: 250px;
+
   }
   // .takeAnote1{
   // //   border: 1px solid black;
@@ -74,6 +92,7 @@
       box-sizing: border-box;
       outline: none;
       border: none;
+      
       border-radius: 8px;
   }
   .takeAnote .noteDescription {
@@ -83,6 +102,7 @@
       border-radius: 8px;
       padding: 14px 16px 12px 16px;
       font-size: .875rem;
+      
       font-weight: 400;
     
   }
@@ -91,9 +111,11 @@
       width: 100%;
       border: none;
       outline: none;
+      
   }
   .titleInputSection {
       position: relative;
+      
   // border: 1px solid black;
   }
   .titleImgSection {
