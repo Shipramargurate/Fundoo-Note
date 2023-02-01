@@ -14,4 +14,7 @@ export class HttpService {
 Get(url: string, token: boolean = false, headersoption: any){
   return this.http.get(this.baseurl + url, token && headersoption)
 }
+delete(url: string, token: boolean = false, headersoption: any){
+  return this.http.get(this.baseurl + url, token && headersoption)
+}
 }

@@ -21,4 +21,5 @@ export class GetAllnotesComponent implements OnInit {
       console.log(this.notelist);
     })
   }
+ 
 }

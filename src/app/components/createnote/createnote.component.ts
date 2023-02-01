@@ -10,8 +10,6 @@ import { NotesService } from 'src/app/services/notesservices/notes.service';
 })
 export class CreatenoteComponent implements OnInit {
 
-  // @ViewChild("notePlaceholder") notePlaceholder!: ElementRef<HTMLDivElement>
-  // @ViewChild("noteMain") noteMain!: ElementRef<HTMLDivElement>
   description: any;
   title: any;
   notetoggle: boolean = true;
@@ -19,8 +17,7 @@ export class CreatenoteComponent implements OnInit {
 
   }
   noteClick() {
-    // this.notePlaceholder.nativeElement.hidden=true;
-    // this.noteMain.nativeElement.hidden=false;
+   
     this.notetoggle = false;
     this.router.navigate(['home/createnote'])
 
