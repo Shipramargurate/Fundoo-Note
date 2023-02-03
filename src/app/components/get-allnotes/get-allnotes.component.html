@@ -1,4 +1,6 @@
 <!-- <app-createnote></app-createnote> -->
+<!-- <app-displaynote></app-displaynote> -->
+<!-- <router-outlet></router-outlet> -->
 <div class="maincontainer" >
     <div class="takeAnote" *ngFor="let note of notelist">
         <div class="titleInputSection">
@@ -11,11 +13,12 @@
                 </span>
             </div>
         </div>
+       <div> {{note.id}}</div>
         <div>
             <div>
                 <textarea matInput placeholder="Take a note..." [(ngModel)]="note.description"
                     class="noteDescription"></textarea>
-                    <app-icons></app-icons>
+                    <app-icons [noteCard]="note"></app-icons>
             </div>
         </div>
 

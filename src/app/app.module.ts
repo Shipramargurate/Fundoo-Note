@@ -23,6 +23,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatListModule} from '@angular/material/list';
 import {MatButtonModule} from '@angular/material/button';
 import {MatMenuModule} from '@angular/material/menu';
+import { TrashnotesComponent } from './components/trashnotes/trashnotes.component';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import {MatMenuModule} from '@angular/material/menu';
     DisplaynoteComponent,
     CreatenoteComponent,
     IconsComponent,
+    TrashnotesComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,9 +1,28 @@
-<!-- 
-    <div class="container-box">
-        <div class="takeAnote cardListItem">
-            <div appearance="fill" >
-                <a href="#" class="icons"> <img src="../../../assets/push_pin_FILL0_wght400_GRAD0_opsz48.png"
-                        style="float: right;margin-top: 10px;margin-right: 10px;"> </a>                
+<!-- <app-get-allnotes></app-get-allnotes> -->
+<!--  create note -->
+<!-- <app-createnote></app-createnote> -->
+<!-- <app-displaynote></app-displaynote> -->
+<!-- <router-outlet></router-outlet> -->
+<div class="maincontainer" >
+    <div class="takeAnote">
+        <div class="titleInputSection">
+            <input placeholder="Title" class="titleInput" >
+            <div class="titleImgSection">
+
+                <span>
+                    <a class="iconstag3"> <img src="../../../assets/push pin.png"
+                            height="25px"> </a>
+                </span>
             </div>
         </div>
-    </div> -->
+       <!-- <div> {{note.id}}</div> -->
+        <div>
+            <div>
+                <textarea matInput placeholder="Take a note..."
+                    class="noteDescription"></textarea>
+                    <app-icons></app-icons>
+            </div>
+        </div>
+
+    </div>
+</div>

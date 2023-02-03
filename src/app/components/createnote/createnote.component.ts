@@ -12,19 +12,23 @@ export class CreatenoteComponent implements OnInit {
 
   description: any;
   title: any;
-  notetoggle: boolean = true;
+  notetoggle: boolean = false;
+  data: any;
+
   constructor(private router: Router, private noteservice: NotesService) {
 
   }
   noteClick() {
-   
-    this.notetoggle = false;
+
+    this.notetoggle = true;
     this.router.navigate(['home/createnote'])
 
   }
   ngOnInit() {
   }
   closebutton() {
+    this.notetoggle = false;
+
     let data = {
       'title': this.title,
       'description': this.description
@@ -33,8 +37,8 @@ export class CreatenoteComponent implements OnInit {
       console.log("note created", response)
 
     })
-    this.notetoggle = true;
   }
+
 
 
 }

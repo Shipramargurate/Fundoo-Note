@@ -31,16 +31,15 @@ export class NotesService {
     }
     return this.httpservice.Get('/notes/getNotesList', true, headerOptions)
   }
-  deletenote(){
+  deletenote(payload : any){
     this.token = localStorage.getItem('token')
     let headerOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
         'Authorization': this.token
-
       })
     }
-    return this.httpservice.delete('/notes/deleteForeverNotes', true, headerOptions)
+    return this.httpservice.Post('/notes/trashNotes',payload, true, headerOptions)
   }
   }
 

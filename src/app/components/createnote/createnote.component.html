@@ -1,56 +1,40 @@
 <div>
-    <div #notePlaceholder (click)="noteClick()" *ngIf="notetoggle" class="takeAnote">
-        <div class="titleInputSection">
+    <div #notePlaceholder (click)="noteClick()" *ngIf="!notetoggle || notetoggle " class="takeAnote">
+        <div class="titleInputSection" *ngIf="!notetoggle" >
             <input placeholder="Title" class="titleInput">
             <div class="titleImgSection">
 
                 <span class="iconstag3">
-                     <img src="../../../assets/push pin.png"
-                         width="20px"   height="20px">
+                    <img src="../../../assets/push pin.png" width="20px" height="20px">
                 </span>
             </div>
         </div>
     </div>
 </div>
 <div>
-    <div #noteMain *ngIf="!notetoggle" class="takeAnote">
+    <div *ngIf="notetoggle" class="takeAnote">
         <div class="titleInputSection">
-            <input placeholder="Title" class="titleInput"  [(ngModel)]="title" >
+            <input placeholder="Title" class="titleInput" [(ngModel)]="title">
             <div class="titleImgSection">
 
-                <span  class="iconstag3">
-                    <img src="../../../assets/push pin.png"
-                            height="25px">
+                <span class="iconstag3">
+                    <img src="../../../assets/push pin.png" height="25px">
                 </span>
             </div>
         </div>
 
         <div>
             <div>
-                <textarea matInput placeholder="Take a note..." class="noteDescription" [(ngModel)]="description"></textarea>
+                <textarea matInput placeholder="Take a note..." class="noteDescription"
+                    [(ngModel)]="description"></textarea>
             </div>
+            <app-icons [noteCard]="data"></app-icons>
 
-            <div style="display: flex;">
-                <div class="iconspace">
-                    <a class="iconstag3"> <img src="../../../assets/notifications_FILL0_wght400_GRAD0_opsz48.png"
-                            height="25px"> </a>
-                    <a class="iconstag3"> <img src="../../../assets/person_add_FILL0_wght400_GRAD0_opsz48.png"
-                            height="25px"> </a>
-                    <a class="iconstag3"> <img src="../../../assets/palette_FILL0_wght400_GRAD0_opsz48.png"
-                            height="25px"> </a>
-                    <a class="iconstag3"> <img src="../../../assets/image_FILL0_wght400_GRAD0_opsz48.png" height="25px">
-                    </a>
-                    <a class="iconstag3"> <img src="../../../assets/archive_FILL0_wght400_GRAD0_opsz48.png"
-                            height="25px"> </a>
-                    <a class="iconstag3"> <img src="../../../assets/more_vert_FILL0_wght400_GRAD0_opsz48.png"
-                            height="25px"> </a>
-                </div>
-                <div class="closebutton">
-                    <button mat-flat-button (click)="closebutton()">Close</button>
+            <div class="closebutton">
+                <button mat-flat-button (click)="closebutton()">Close</button>
 
-                </div>
             </div>
         </div>
-
     </div>
+
 </div>

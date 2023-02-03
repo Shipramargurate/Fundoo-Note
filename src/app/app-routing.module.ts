@@ -8,6 +8,7 @@ import { GetAllnotesComponent } from './components/get-allnotes/get-allnotes.com
 import { LoginComponent } from './components/login/login.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { ResetpasswordComponent } from './components/resetpassword/resetpassword.component';
+import { TrashnotesComponent } from './components/trashnotes/trashnotes.component';
 
 const routes: Routes = [
 
@@ -18,9 +19,12 @@ const routes: Routes = [
   { path: 'reset', component: ForgetpasswordComponent },
   {
     path: 'home', component: DashboardComponent,
-    children: [{ path: 'getallnotes', component: GetAllnotesComponent },
+    children: [
+      { path: 'getallnotes', component: GetAllnotesComponent },
     { path: 'displaynote', component: DisplaynoteComponent },
-    { path: 'createnote', component: CreatenoteComponent }
+    { path: 'createnote', component: CreatenoteComponent },
+    { path: 'trash', component: TrashnotesComponent }
+
     ]
   },
 ];
