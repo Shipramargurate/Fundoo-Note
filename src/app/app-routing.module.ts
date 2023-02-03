@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CreatenoteComponent } from './components/createnote/createnote.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
@@ -11,9 +11,8 @@ import { ResetpasswordComponent } from './components/resetpassword/resetpassword
 import { TrashnotesComponent } from './components/trashnotes/trashnotes.component';
 
 const routes: Routes = [
-
+   {path:'', component:DashboardComponent},
   { path: 'signup', component: RegistrationComponent },
-  { path: 'home', component: DashboardComponent },
   { path: 'login', component: LoginComponent },
   { path: 'resetpassword', component: ResetpasswordComponent },
   { path: 'reset', component: ForgetpasswordComponent },
@@ -21,9 +20,9 @@ const routes: Routes = [
     path: 'home', component: DashboardComponent,
     children: [
       { path: 'getallnotes', component: GetAllnotesComponent },
-    { path: 'displaynote', component: DisplaynoteComponent },
-    { path: 'createnote', component: CreatenoteComponent },
-    { path: 'trash', component: TrashnotesComponent }
+    // { path: 'displaynote', component: DisplaynoteComponent },
+    { path: 'notes', component: CreatenoteComponent },
+    { path: 'trash', component: TrashnotesComponent },
 
     ]
   },

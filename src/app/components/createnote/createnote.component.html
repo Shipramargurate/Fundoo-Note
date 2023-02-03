@@ -1,6 +1,6 @@
 <div>
     <div #notePlaceholder (click)="noteClick()" *ngIf="!notetoggle || notetoggle " class="takeAnote">
-        <div class="titleInputSection" *ngIf="!notetoggle" >
+        <div class="titleInputSection" *ngIf="!notetoggle">
             <input placeholder="Title" class="titleInput">
             <div class="titleImgSection">
 
@@ -34,7 +34,10 @@
                 <button mat-flat-button (click)="closebutton()">Close</button>
 
             </div>
+
         </div>
     </div>
-
+    
+    
 </div>
+<!-- <app-get-allnotes></app-get-allnotes> -->

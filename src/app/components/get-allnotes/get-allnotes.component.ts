@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NotesService } from 'src/app/services/notesservices/notes.service';
 
 @Component({
@@ -7,7 +7,8 @@ import { NotesService } from 'src/app/services/notesservices/notes.service';
   styleUrls: ['./get-allnotes.component.scss']
 })
 export class GetAllnotesComponent implements OnInit {
-  notelist: any = [];
+  notearray: any = [];
+  @Input() notelist: any;
   constructor(private noteservice: NotesService) {
 
   }

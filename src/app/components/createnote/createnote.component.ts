@@ -21,7 +21,7 @@ export class CreatenoteComponent implements OnInit {
   noteClick() {
 
     this.notetoggle = true;
-    this.router.navigate(['home/createnote'])
+    this.router.navigate(['home/notes'])
 
   }
   ngOnInit() {
